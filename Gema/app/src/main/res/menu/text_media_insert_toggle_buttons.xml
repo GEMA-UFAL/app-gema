@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/toggle_left"
+        android:icon="@drawable/ic_insert_link_black_24dp" />
+
+    <item
+        android:id="@+id/toggle_justify"
+        android:icon="@drawable/ic_image_black_24dp" />
+
+    <item
+        android:id="@+id/toggle_left"
+        android:icon="@drawable/ic_movie_black_24dp" />
+
+    <item
+        android:id="@+id/toggle_left"
+        android:icon="@drawable/ic_attach_file_black_24dp" />
+
+    <item
+        android:id="@+id/toggle_left"
+        android:icon="@drawable/ic_functions_black_24dp" />
+
+</menu>

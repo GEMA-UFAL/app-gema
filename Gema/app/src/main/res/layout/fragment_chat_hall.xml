@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context=".Fragments.Chat.ChatHall">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:id="@+id/chat_hall_recycler_view"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginBottom="80dp"
+                app:stackFromEnd="true">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <LinearLayout
+                android:id="@+id/bar_message_send"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:weightSum="5"
+                android:layout_gravity="bottom"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="@color/md_white_1000"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            <EditText
+                    android:id="@+id/chat_message_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/tw__light_gray"
+                    android:hint="Entre com a mensagem..."
+                    android:layout_weight="4"
+                    android:text=""/>
+
+            <Button
+                    android:id="@+id/chat_send_message_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_white_1000"
+                    android:text="ENVIAR"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/md_black_1000"
+                    android:padding="10dp"/>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

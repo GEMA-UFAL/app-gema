@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/notificacoes"
+            android:icon="@drawable/ic_notifications_black_24dp"
+            android:title="Notificações" />
+
+        <item
+            android:id="@+id/competicoes"
+            android:icon="@drawable/ic_fitness_center_black_24dp"
+            android:title="Competições"/>
+
+        <item
+            android:id="@+id/eventos"
+            android:icon="@drawable/ic_whatshot_black_24dp"
+            android:title="Eventos"/>
+
+    </group>
+
+    <item
+        android:id="@+id/social"
+        android:title="Social">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/chat"
+                    android:icon="@drawable/ic_chat_black_24dp"
+                    android:title="Chat"/>
+
+                <item
+                    android:id="@+id/amizades"
+                    android:icon="@drawable/ic_people_black_24dp"
+                    android:title="Amizades"/>
+
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/comunidade"
+        android:title="Comunidade" >
+        <menu>
+            <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/forum"
+                        android:icon="@drawable/ic_forum_black_24dp"
+                        android:title="Fórum"/>
+
+                    <item
+                        android:id="@+id/criar_postagem"
+                        android:icon="@drawable/ic_create_black_24dp"
+                        android:title="Criar postagem"/>
+
+                    <item
+                        android:id="@+id/gerenciar_postagem"
+                        android:icon="@drawable/ic_inbox_black_24dp"
+                        android:title="Gerenciar postagens"/>
+
+            </group>
+        </menu>
+    </item>
+
+
+</menu>

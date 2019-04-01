@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/toggle_justify"
+        android:icon="@drawable/ic_format_bold_black_24dp" />
+
+    <item
+        android:id="@+id/toggle_left"
+        android:icon="@drawable/ic_format_italic_black_24dp" />
+
+    <item
+        android:id="@+id/toggle_left"
+        android:icon="@drawable/ic_format_quote_black_24dp" />
+
+    <item
+        android:id="@+id/toggle_left"
+        android:icon="@drawable/ic_format_clear_black_24dp" />
+</menu>
