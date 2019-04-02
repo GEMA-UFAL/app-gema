@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:orientation="horizontal"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="15dp"
+            app:cardCornerRadius="5dp"
+            app:contentPadding="15dp"
+            style="@style/Widget.MaterialComponents.CardView">
+
+        <!--Componentes-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <!--Translated title-->
+            <TextView
+                    android:id="@+id/forum_post_alternative_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13dp"/>
+
+            <!--Title-->
+            <TextView
+                    android:id="@+id/forum_post_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="19dp"/>
+
+            <!--Image preview-->
+            <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/forum_post_image_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/tsp"/>
+
+            <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                <com.google.android.material.chip.Chip
+                        android:id="@+id/forum_post_tag1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        style="@style/Widget.MaterialComponents.Chip.Action"/>
+
+                <com.google.android.material.chip.Chip
+                        android:id="@+id/forum_post_tag2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        style="@style/Widget.MaterialComponents.Chip.Action"/>
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                    android:id="@+id/forum_post_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginBottom="5dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text=""
+                    style="@style/Widget.MaterialComponents.Button"
+            />
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

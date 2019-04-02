@@ -1,12 +1,13 @@
-package br.com.gema.Fragments.Chat
+package br.com.gema.Fragments.Chat.Fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import br.com.gema.Fragments.Chat.Handler.MessageData
+import br.com.gema.Fragments.Chat.Model.MessageData
 
 import br.com.gema.R
+import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.squareup.picasso.Picasso
@@ -41,7 +42,11 @@ class ChatHall : androidx.fragment.app.Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         chat_send_message_button.setOnClickListener {
-            val messageData = MessageData(chat_message_holder.text.toString(), activity!!)
+            val messageData = MessageData(
+                FirebaseAuth.getInstance().uid.toString(),
+                chat_message_holder.text.toString(),
+                GoogleSignIn.getLastSignedInAccount(activity)!!.photoUrl.toString()
+            )
             sendMessage(messageData)
         }
 
@@ -60,14 +65,17 @@ class ChatHall : androidx.fragment.app.Fragment() {
             override fun onChildAdded(dataSnapshot: DataSnapshot, p1: String?) {
                 val message = dataSnapshot.getValue(MessageData::class.java)
                 if(message != null) {
-                    val messageData = MessageData(message.text, activity!!)
+                    val messageData =
+                        MessageData(message.userId, message.text, message.imageUrl)
 
-                    if(message.userId == FirebaseAuth.getInstance().uid.toString())
+                    if(messageData.userId == FirebaseAuth.getInstance().uid.toString())
                         adapter.add(GetOwnerMessageHolder(messageData))
                     else
                         adapter.add(GetMessageHolder(messageData))
                 }
-                chat_hall_recycler_view.smoothScrollToPosition(chat_hall_recycler_view.adapter!!.itemCount - 1)
+
+                //if(chat_hall_recycler_view != null)
+                chat_hall_recycler_view?.smoothScrollToPosition(chat_hall_recycler_view.adapter!!.itemCount - 1)
             }
             override fun onCancelled(p0: DatabaseError) { }
             override fun onChildChanged(p0: DataSnapshot, p1: String?) { }

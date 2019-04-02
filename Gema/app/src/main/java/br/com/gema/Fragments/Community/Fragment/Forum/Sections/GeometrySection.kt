@@ -1,4 +1,4 @@
-package br.com.gema.Fragments.Community.Forum.Sections
+package br.com.gema.Fragments.Community.Fragment.Forum.Sections
 
 import android.content.Context
 import android.net.Uri

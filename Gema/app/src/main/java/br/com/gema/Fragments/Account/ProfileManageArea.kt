@@ -1,20 +1,15 @@
-package br.com.gema.Account
+package br.com.gema.Fragments.Account
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
-import android.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
 import br.com.gema.R
-import com.bumptech.glide.Glide
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_profile_manage_area.*
-import kotlinx.android.synthetic.main.owner_chat_message_holder.view.*
 
 class ProfileManageArea : androidx.fragment.app.Fragment() {
 

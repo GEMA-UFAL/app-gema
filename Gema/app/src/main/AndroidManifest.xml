@@ -21,12 +21,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Account.RankPreviewArea"/>
+        <activity android:name="br.com.gema.Fragments.Account.RankPreviewArea"/>
         <activity android:name=".Login.Handler.FacebookLoginHandler"/>
         <activity android:name=".Login.Handler.GoogleLoginHandler"/>
-        <activity android:name=".Account.AccountManageLobby"/>
-        <activity android:name=".MainLobby"/>
-        <activity android:name=".Fragments.Community.Forum.Management.NewPostArea"/>
+        <activity android:name="br.com.gema.Fragments.Account.AccountManageLobby"/>
+        <activity android:name=".Activities.MainLobby"/>
+        <activity android:name="br.com.gema.Fragments.Community.Fragment.Forum.Management.NewPostArea"/>
     </application>
 
 </manifest>

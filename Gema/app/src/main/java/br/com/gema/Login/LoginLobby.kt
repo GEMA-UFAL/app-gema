@@ -4,16 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.ImageButton
-import br.com.gema.Fragments.Community.Forum.Management.NewPostArea
-import br.com.gema.Login.Handler.FacebookLoginHandler
 import br.com.gema.Login.Handler.GoogleLoginHandler
-import br.com.gema.Login.Handler.TwitterLoginHandler
-import br.com.gema.MainLobby
+import br.com.gema.Activities.MainLobby
 import br.com.gema.R
-import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_login_lobby.*
 
 
 open class LoginLobby : AppCompatActivity() {
@@ -26,9 +20,9 @@ open class LoginLobby : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_lobby)
 
-        //startActivity(MainLobby.getLaunchIntent(this))
+        startActivity(MainLobby.getLaunchIntent(this))
         //Assign functions to UI elements
-        setupUI()
+        //setupUI()
 
     }
 

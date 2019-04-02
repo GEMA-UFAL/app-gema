@@ -1,4 +1,4 @@
-package br.com.gema.Fragments.Chat.Handler
+package br.com.gema.Fragments.Chat.Model
 
 
 import androidx.fragment.app.FragmentActivity
@@ -12,7 +12,5 @@ class MessageData(
 
     constructor() : this("", "", "")
 
-    constructor(text: String, activity : FragmentActivity) : this (FirebaseAuth.getInstance().uid.toString(), text,
-        GoogleSignIn.getLastSignedInAccount(activity)!!.photoUrl.toString())
 
 }
