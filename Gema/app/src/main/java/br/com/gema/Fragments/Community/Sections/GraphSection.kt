@@ -1,4 +1,4 @@
-package br.com.gema.Fragments.Community.Fragment.Forum.Sections
+package br.com.gema.Fragments.Community.Sections
 
 
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.gema.Fragments.Community.Model.ForumPost
-import br.com.gema.Fragments.Community.Handler.ForumPostHolder
+import br.com.gema.Fragments.Community.Holder.ForumPostHolder
 
 import br.com.gema.R
 import com.github.florent37.materialviewpager.MaterialViewPagerHelper
@@ -20,9 +20,7 @@ class GraphSection : androidx.fragment.app.Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() : GraphSection {
-            return GraphSection()
-        }
+        fun newInstance() = GraphSection()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +39,7 @@ class GraphSection : androidx.fragment.app.Fragment() {
         super.onViewCreated(view, savedInstanceState)
         MaterialViewPagerHelper.registerScrollView(activity, graph_section_nested_scroll_view)
 
+        /*
         var tsp = ForumPost.Builder().title("").alternativeTitle("").imageUrl("").tag1("").tag2("").description("").build()
         var mcmf = ForumPost.Builder().title("").alternativeTitle("").imageUrl("").tag1("").tag2("").description("").build()
         var mvc = ForumPost.Builder().title("").alternativeTitle("").imageUrl("").tag1("").tag2("").description("").build()
@@ -49,7 +48,11 @@ class GraphSection : androidx.fragment.app.Fragment() {
         adapter.add(ForumPostHolder(tsp))
         adapter.add(ForumPostHolder(tsp))
 
+*/
+
         graph_section_recycler_view.adapter = adapter
     }
+
+
 
 }

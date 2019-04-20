@@ -1,4 +1,4 @@
-package br.com.gema.Fragments.Community.Handler
+package br.com.gema.Fragments.Community.Holder
 
 import br.com.gema.Fragments.Community.Model.ForumPost
 import br.com.gema.R

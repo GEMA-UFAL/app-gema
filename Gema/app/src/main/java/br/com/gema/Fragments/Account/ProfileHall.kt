@@ -11,11 +11,11 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_profile_manage_area.*
 
-class ProfileManageArea : androidx.fragment.app.Fragment() {
+class ProfileHall : androidx.fragment.app.Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() = ProfileManageArea()
+        fun newInstance() = ProfileHall()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

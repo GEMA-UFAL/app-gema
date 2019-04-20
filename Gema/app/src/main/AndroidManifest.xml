@@ -26,7 +26,7 @@
         <activity android:name=".Login.Handler.GoogleLoginHandler"/>
         <activity android:name="br.com.gema.Fragments.Account.AccountManageLobby"/>
         <activity android:name=".Activities.MainLobby"/>
-        <activity android:name="br.com.gema.Fragments.Community.Fragment.Forum.Management.NewPostArea"/>
+        <activity android:name="br.com.gema.Fragments.Community.Handler.NewPostArea"/>
     </application>
 
 </manifest>

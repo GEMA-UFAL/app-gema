@@ -6,10 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import br.com.gema.Fragments.Account.ProfileManageArea
-import br.com.gema.Fragments.Chat.Fragment.ChatHall
-import br.com.gema.Fragments.Community.Fragment.Forum.Management.NewPublicationArea
-import br.com.gema.Fragments.Community.Fragment.ForumMain
+import br.com.gema.Fragments.Account.ProfileHall
+import br.com.gema.Fragments.Chat.ChatHall
+import br.com.gema.Fragments.Community.Handler.NewPublicationArea
+import br.com.gema.Fragments.Community.ForumHall
+import br.com.gema.Fragments.Community.Sections.ExamplePost
 import br.com.gema.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -33,11 +34,11 @@ class MainLobby : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.forum -> {
-                replaceFragment(ForumMain.newInstance())
+                replaceFragment(ExamplePost.newInstance())
                 return@OnNavigationItemSelectedListener true
             }
             else -> {
-                replaceFragment(ProfileManageArea.newInstance())
+                replaceFragment(ProfileHall.newInstance())
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -61,8 +62,8 @@ class MainLobby : AppCompatActivity() {
 
         navigation_view.inflateHeaderView(R.layout.navigation_view_header)
 
-        navigation_view.getHeaderView(navigation_view.headerCount-1).navigation_view_name.text = account.displayName.toString()
-        navigation_view.getHeaderView(navigation_view.headerCount-1).navigation_view_email.text = account.email.toString()
+        navigation_view.getHeaderView(0).navigation_view_name.text = account.displayName.toString()
+        navigation_view.getHeaderView(0).navigation_view_email.text = account.email.toString()
         Picasso.get().load(account.photoUrl.toString()).into(navigation_view.getHeaderView(0).navigation_image_view)
 
         bottomNavigation = bottom_navigation

@@ -1,4 +1,4 @@
-package br.com.gema.Fragments.Community.Fragment.Forum.Sections
+package br.com.gema.Fragments.Community.Sections
 
 import android.os.Bundle
 import android.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.gema.Fragments.Community.Model.ForumPost
-import br.com.gema.Fragments.Community.Handler.ForumPostHolder
+import br.com.gema.Fragments.Community.Holder.ForumPostHolder
 
 import br.com.gema.R
 import com.github.florent37.materialviewpager.MaterialViewPagerHelper
@@ -46,6 +46,7 @@ class DataStructuresSection : androidx.fragment.app.Fragment() {
         super.onViewCreated(view, savedInstanceState)
         MaterialViewPagerHelper.registerScrollView(activity, data_structures_section_nested_scroll_view)
 
+        /*
 
         var tsp = ForumPost.Builder().title("").alternativeTitle("").imageUrl("").tag1("").tag2("").description("").build()
         var mcmf = ForumPost.Builder().title("").alternativeTitle("").imageUrl("").tag1("").tag2("").description("").build()
@@ -54,6 +55,8 @@ class DataStructuresSection : androidx.fragment.app.Fragment() {
         adapter.add(ForumPostHolder(tsp))
         adapter.add(ForumPostHolder(tsp))
         adapter.add(ForumPostHolder(tsp))
+
+        */
 
         data_structures_section_recycler_view.adapter = adapter
     }

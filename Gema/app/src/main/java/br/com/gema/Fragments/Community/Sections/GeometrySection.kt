@@ -1,4 +1,4 @@
-package br.com.gema.Fragments.Hall
+package br.com.gema.Fragments.Community.Sections
 
 import android.content.Context
 import android.net.Uri
@@ -10,12 +10,12 @@ import android.view.ViewGroup
 
 import br.com.gema.R
 
-
-class NotificationsArea : androidx.fragment.app.Fragment() {
+// TODO: Rename parameter arguments, choose names that match
+class GeometrySection : androidx.fragment.app.Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() = NotificationsArea()
+        fun newInstance() = GeometrySection()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +27,7 @@ class NotificationsArea : androidx.fragment.app.Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notifications_area, container, false)
+        return inflater.inflate(R.layout.fragment_geometry_section, container, false)
     }
 
 }

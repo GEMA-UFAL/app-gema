@@ -1,4 +1,4 @@
-package br.com.gema.Fragments.Chat.Fragment
+package br.com.gema.Fragments.Chat
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -85,7 +85,7 @@ class ChatHall : androidx.fragment.app.Fragment() {
 
     }
 
-    class GetOwnerMessageHolder(val messageData: MessageData) : Item() {
+    class GetOwnerMessageHolder(private val messageData: MessageData) : Item() {
         override fun bind(viewHolder: com.xwray.groupie.kotlinandroidextensions.ViewHolder, position: Int) {
             viewHolder.itemView.owner_message_text.text = messageData.text
             Picasso.get().load(messageData.imageUrl).into(viewHolder.itemView.owner_user_image)
@@ -97,10 +97,11 @@ class ChatHall : androidx.fragment.app.Fragment() {
 
     }
 
-    class GetMessageHolder(val messageData: MessageData) : Item() {
+    class GetMessageHolder(private val messageData: MessageData) : Item() {
         override fun bind(viewHolder: com.xwray.groupie.kotlinandroidextensions.ViewHolder, position: Int) {
-            viewHolder.itemView.another_user_message_text.text = messageData.text
-            Picasso.get().load(messageData.imageUrl).into(viewHolder.itemView.owner_user_image)
+
+            viewHolder.itemView.another_user_message_text.text = messageData.text.toString()
+            //Picasso.get().load(messageData.imageUrl).into(viewHolder.itemView.owner_user_image)
         }
 
         override fun getLayout(): Int {

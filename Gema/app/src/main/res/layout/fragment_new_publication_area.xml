@@ -4,7 +4,7 @@
              xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.Community.Fragment.Forum.Management.NewPublicationArea">
+    tools:context=".Fragments.Community.Handler.NewPublicationArea">
 
     <ScrollView
             android:layout_width="match_parent"
@@ -49,6 +49,21 @@
                     <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:hint="Título Alternativo"
+                            app:errorEnabled="true"
+                            app:hintEnabled="true"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Descrição -->
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:hint="Descrição"
                             app:errorEnabled="true"
                             app:hintEnabled="true"
@@ -59,6 +74,49 @@
                                 android:layout_height="wrap_content"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                        <!-- Descrição -->
+                        <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:hint="Tag"
+                                app:errorEnabled="true"
+                                app:hintEnabled="true"
+                                android:layout_weight="1"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:paddingRight="8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Descrição -->
+                        <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="Tag"
+                                android:paddingLeft="8dp"
+                                app:errorEnabled="true"
+                                app:hintEnabled="true"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+
 
                     <!--Barra de ferramentas-->
                     <LinearLayout

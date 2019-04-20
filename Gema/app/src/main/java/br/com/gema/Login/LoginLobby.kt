@@ -20,9 +20,9 @@ open class LoginLobby : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_lobby)
 
-        startActivity(MainLobby.getLaunchIntent(this))
+        //startActivity(MainLobby.getLaunchIntent(this))
         //Assign functions to UI elements
-        //setupUI()
+        setupUI()
 
     }
 

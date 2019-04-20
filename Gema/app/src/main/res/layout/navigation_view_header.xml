@@ -27,7 +27,7 @@
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:scaleType="centerInside"
-            android:src="@drawable/r_level8"
+            android:src="@drawable/r_level9"
             />
 
     </LinearLayout>
